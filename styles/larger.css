@@ -1,11 +1,11 @@
 @media only screen and (min-width: 38rem) {
 
 
-   header, main, nav, footer {
+    header, main, nav, footer {
     
     max-width: 900px;
     margin: 0 auto;
-   }
+   } 
    header {
     grid-template-columns: 24px auto;
 
@@ -35,9 +35,13 @@
     .card {
         grid-column: 1 / 3; 
     }
+    .card p {
+        text-align: center;
+    }
 
     .student {
-        grid-column: 3 / 4; 
+        grid-column: 3 / 4;
+
     }
 
   .courses  h2 {
