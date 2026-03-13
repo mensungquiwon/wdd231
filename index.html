@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the  frontend development page and it's about the courses I completed. ">
     <meta name="author" content="Jonathan M. Quiwon">
+    <meta property="og:title" content="WDD231 | Jonathan Mensung Quiwon">
+    <meta property="og:description" content="This is the  frontend development page and it's about the courses I completed.">
+    <meta property="og:image" content="https://images/profile.webp">
+    <meta property="og:url" content="https://mensungquiwon.github.io/wdd231/index.html">    
+
     <title>WDD231 | Jonathan Mensung Quiwon</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -15,12 +20,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
         <img src="images/home.svg" alt="site logo" width="1" height="1">
         <span>Jonathan's Chamber of Commerce</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
         
         
     </header>
@@ -47,30 +53,24 @@
                     <img src="images/profile.webp" alt="Jonathan Quiwon">
                 </section>
         </div>
-            <section class="courses">
+            <section id="courses" class="courses">
                 <h2>Web Certificate Courses</h2>
-                <div class="course-btn">
-                    <button id="all">All</button>
-                    <button id="cse">CSE</button>
-                    <button id="wdd">WDD</button>
-                </div>
-
-                 <ul>
-                    <li><a href="#">WDD130</a></li>
-                    <li><a href="#">WDD131</a></li>
-                    <li><a href="#">WDD231</a></li>
-                 </ul>
-                </section>
-            </main>
-            <footer>
-                <p>The total credits for course listed above is 6</p>
-                <div class="social">
+                <ul id="course-filters" class="course-filters">
+                    <li><button>All</button></li>
+                    <li><button>WDD</button></li>
+                    <li><button>CSE</button></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p id="total-credits">The total credits for the courses listed above is 0</p>
+            <div class="social">
             <a href="www.linkedin.com/in/jonathan-quiwon" target="_blank"> <img src="images/linkedin.svg" alt="LinkedIn icon" width="16" height="16"></a>
             <a href="https://github.com/mensungquiwon" target="_blank"> <img src="images/github.svg" alt="github icon" width="16" height="16"></a>
             <a href="https://wa.me/231880778315" target="_blank"> <img src="images/whatsapp.svg" alt="Whatsapp icon" width="16" height="16"></a>
         </div>
         <div class="year">
-            <p>&copy;2025<span id="currentYear"></span> | Jonathan Mensung Quiwon | Liberia</p>
+            <p>&copy;<span id="currentYear"></span> | Jonathan Mensung Quiwon | Liberia</p>
             <p id="lastModified"></p>
         </div>
     </footer>

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1080px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: rgb(5, 5, 49);
+    text-align: center;
+    color: #ddd;
+    padding: 15px;
+    margin-bottom: 5px;
+
+}
+
+#cards {
+    display: grid; 
+    grid-gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+section {
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #ddd;
+    align-items: center;
+
+}
+section h2, p {
+    text-align: center;
+    padding: 2px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: rgb(5, 5, 49); ;
+    color: #ddd;
+    padding: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
