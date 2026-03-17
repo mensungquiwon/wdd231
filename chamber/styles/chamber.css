@@ -1,0 +1,248 @@
+body {
+    font-family: "Josefin sans", sans-serif;
+    box-sizing: border-box;
+}
+
+ .sectionHead{
+    text-align: left;
+    font-style: inherit;
+    color: #000;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 1px #ddd;
+    align-items: end;
+    column-gap: 8px;
+
+}
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+header span {
+    font-size: 1.2rem;
+    color: #3D4D5B;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #3D4D5B;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color:#3D4D5B;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+.navigation a:hover {
+    background-color: #E07A5F;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;  
+  gap: 2px;                    
+  padding: 10px;
+}
+
+
+footer {
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: #ccc solid 1px;
+    border-radius: 28px;
+}
+.social img {
+    width: 60%;
+    height: auto;
+}
+.year {
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* --------------------------------------
+   VIEW TOGGLE BUTTONS
+----------------------------------------- */
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.view-buttons button {
+    padding: 0.6rem 1.3rem;
+    border: none;
+    background-color: #004d40;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-buttons button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+.view-buttons button.active {
+    background-color: #009688;
+    box-shadow: 0 0 8px rgba(0, 150, 136, 0.6);
+}
+
+/* --------------------------------------
+   CARDS GRID AREA
+----------------------------------------- */
+#cards {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* GRID LAYOUT */
+.grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* LIST LAYOUT */
+.list {
+    grid-template-columns: 1fr;
+}
+
+/* --------------------------------------
+   INDIVIDUAL MEMBER CARD
+----------------------------------------- */
+.card {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* --------------------------------------
+   LIST VIEW — CARD ALIGNMENT
+----------------------------------------- */
+.list .card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+.list .card h2 {
+    margin: 0;
+}
+
+/* Make website link look nicer */
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #00796b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+/* LIST VIEW STYLE */
+
+/* Make text cleaner in list rows */
+.list .card h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.list .card p,
+.list .card a {
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: left;
+}
+
+.list .card a {
+    color:#009688 ;
+    word-break: break-all;
+}
+.list .card img {
+    display: none;
+}
+
+
+.list .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #eaf6fa;
+}

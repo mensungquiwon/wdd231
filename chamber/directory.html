@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is Nimba chamber of commerce directory page. Containing all the businesses">
     <meta name="author" content="Jonathan M. Quiwon">
     <meta property="og:title" content="Jonathan's Chamber of Commerce">
     <meta property="og:description" content="Jonathan's Chamber of commerce directory page. It contains vital information about the board.">
     <meta property="og:image" content="../images/profile.webp">
     <meta property="og:url" content="https://mensungquiwon.github.io/wdd231/index.html"> 
+
     <title>Chamber directory</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/chamber-large.css">
+    <script src="./scripts/chamber.js" defer></script>
 </head>
 <body>
+    <header>
+         <img src="../images/home.svg" alt="site logo" width="50" height="50">
+        <span>Nimba Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button> 
+    </header>
+    <nav id="nav-bar" class="navigation">
+         <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li class="current"><a href="#">Business Directory</a></li>
+         <li><a href="#">Join</a></li>
+    </ul>
+    </nav>
+    <main>
+        <div class="view-buttons">
+            <button id="gridBtn" aria-label="Toggle grid view button">Grid View</button>
+            <button id="listBtn" aria-label="Toggle list view button">List View</button>
+        </div>
     
+
+        <h2 class="sectionHead">Directories</h2>
+        <div id="cards">
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="www.linkedin.com/in/jonathan-quiwon" target="_blank"> <img src="../images/linkedin.svg" alt="LinkedIn icon" width="16" height="16"></a>
+            <a href="https://github.com/mensungquiwon" target="_blank"> <img src="../images/github.svg" alt="github icon" width="16" height="16"></a>
+            <a href="https://wa.me/231880778315" target="_blank"> <img src="../images/whatsapp.svg" alt="Whatsapp icon" width="16" height="16"></a>
+        </div>
+        <div class="year">
+            <p>&copy;<span id="currentYear"></span>| WDD231 | Jonathan Mensung Quiwon | Liberia</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,105 @@
+[
+  {
+    
+
+"id": 1,
+    "name": "Quin",
+    "website": "https://mensungquiwon.github.io/wdd231/index.html",
+    "imageHref": "../images/home.svg",
+    "addresses": [
+      "Puma Way 1, 91074 Herzogenaurach, Germany"
+
+  ],
+    "phone": "+231-880-778-315",
+    "email": "hello@puma.example",
+    "membership": 3,
+    "about": "Cloud and productivity solutions provider supporting enterprises with AI, security, and collaboration tools.",
+    "tags": ["cloud", "productivity", "enterprise"]
+  },
+
+  {
+    "id": 2,
+    "name": "Google",
+    "website": "https://about.google/",
+    "imageHref": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "addresses": [
+      "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+    ],
+    "phone": "+1-650-253-0000",
+    "email": "contact@google.example",
+    "membership": 2,
+    "about": "Information services and AI research company focused on organizing the world’s information.",
+    "tags": ["search", "ads", "ai"]
+  },
+  {
+    "id": 3,
+    "name": "Amazon",
+    "website": "https://www.amazon.com/",
+    "imageHref": "https://www.amazon.com/favicon.ico",
+    "addresses": [
+      "410 Terry Ave N, Seattle, WA 98109, USA"
+    ],
+    "phone": "+1-888-280-4331",
+    "email": "support@amazon.example",
+    "membership": 1,
+    "about": "E‑commerce and cloud services company providing retail, logistics, and digital media.",
+    "tags": ["ecommerce", "logistics", "cloud"]
+  },
+  {
+    "id": 4,
+    "name": "Apple",
+    "website": "https://www.apple.com/",
+    "imageHref": "https://www.apple.com/favicon.ico",
+    "addresses": [
+      "One Apple Park Way, Cupertino, CA 95014, USA"
+    ],
+    "phone": "+1-408-996-1010",
+    "email": "care@apple.example",
+    "membership": 3,
+    "about": "Consumer electronics and services company focused on hardware design, software, and media.",
+    "tags": ["hardware", "services", "design"]
+  },
+  {
+    "id": 5,
+    "name": "Netflix",
+    "website": "https://www.netflix.com/",
+    "imageHref": "https://www.netflix.com/favicon.ico",
+    "addresses": [
+      "121 Albright Way, Los Gatos, CA 95032, USA"
+    ],
+    "phone": "+1-888-638-3549",
+    "email": "media@netflix.example",
+    "membership": 2,
+    "about": "Streaming entertainment service delivering films, series, and games worldwide.",
+    "tags": ["streaming", "media", "entertainment"]
+  },
+  {
+    "id": 6,
+    "name": "Tesla",
+    "website": "https://www.tesla.com/",
+    "imageHref": "https://www.tesla.com/favicon.ico",
+    "addresses": [
+      "1 Tesla Rd, Austin, TX 78725, USA",
+      "Service Partner: Somalia Drive, Gardnersville, Monrovia"
+    ],
+    "phone": "+1-888-518-3752",
+    "email": "sales@tesla.example",
+    "membership": 1,
+    "about": "EVs, energy storage, and solar products designed for a sustainable energy future.",
+    "tags": ["ev", "energy", "sustainability"]
+  },
+  {
+    "id": 7,
+    "name": "Samsung",
+    "website": "https://www.samsung.com/us/",
+    "imageHref": "https://favicon.im/samsung.com",
+    "addresses": [
+      "85 Challenger Rd, Ridgefield Park, NJ 07660, USA"
+    ],
+    "phone": "+1-800-726-7864",
+    "email": "care@samsung.example",
+    "membership": 3,
+    "about": "Global electronics company producing mobile devices, displays, TVs, and home appliances.",
+    "tags": ["electronics", "mobile", "appliances"]
+  }
+]

@@ -1,0 +1,74 @@
+@media only screen and (min-width: 38rem) {
+
+
+    header, main, nav, footer {
+    
+    max-width: 900px;
+    margin: 0 auto;
+   } 
+   header {
+    grid-template-columns: 24px auto;
+
+   }
+    
+    .hamburger {
+        display: none;
+    }
+    .navigation{
+        display: block;
+        border-bottom: #eee solid 1px;
+    }
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    .list {
+    display: block;
+}
+
+.list .card {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1.5fr;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #eaf6fa;
+}
+
+.list .card:nth-child(even) {
+    background-color: #d9edf2; /* alternating row color */
+}
+
+.list .card img {
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Make text cleaner in list rows */
+.list .card h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.list .card p,
+.list .card a {
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: left;
+}
+
+.list .card a {
+    color: #0074c2;
+    word-break: break-all;
+}
+.list .card img {
+    display: none;
+}
+}
