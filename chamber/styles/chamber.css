@@ -3,11 +3,6 @@ body {
     box-sizing: border-box;
 }
 
- .sectionHead{
-    text-align: left;
-    font-style: inherit;
-    color: #000;
-}
 
 header {
     display: grid;
@@ -188,21 +183,6 @@ footer {
     margin: 0 auto 1rem;
 }
 
-/* --------------------------------------
-   LIST VIEW — CARD ALIGNMENT
------------------------------------------ */
-.list .card {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    text-align: left;
-}
-
-.list .card h2 {
-    margin: 0;
-}
-
-/* Make website link look nicer */
 .card a {
     display: inline-block;
     margin-top: 0.5rem;
@@ -214,9 +194,7 @@ footer {
 .card a:hover {
     text-decoration: underline;
 }
-/* LIST VIEW STYLE */
 
-/* Make text cleaner in list rows */
 .list .card h2 {
     font-size: 1.1rem;
     margin: 0;
