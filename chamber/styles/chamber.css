@@ -20,7 +20,7 @@ header img {
     padding-bottom: 5px;
 }
 
-picture {
+/* picture {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -34,7 +34,7 @@ picture img {
     height: auto;
     display: block;
     object-fit: cover;
-}
+} */
 
 header span {
     font-size: 1.2rem;
@@ -384,7 +384,6 @@ footer {
     text-decoration: underline;
 }
 
-/* Membership badges */
 .level {
     margin-top: .8rem;
     font-weight: 600;
@@ -458,3 +457,47 @@ footer {
     transform: scale(0.97);
 }
 
+/* Hero container */
+/* Hero container */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* Make the image full size */
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* Increase this number for darker effect */
+    pointer-events: none;
+}
+
+/* Overlay text */
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+}
