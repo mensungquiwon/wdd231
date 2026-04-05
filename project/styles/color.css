@@ -1,0 +1,67 @@
+:root {
+    --primary-blue: #0A2540;
+    --accent-gold: #F5B700;
+    --background-white: #FFFFFF;
+    --light-gray: #F2F2F2;
+    --text-dark: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: var(--primary-blue);
+    color: var(--background-white);
+    padding: 10px 0;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h2, h3 {
+    color: var(--primary-blue);
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-top: 30px;
+}
+
+/* ===============================
+   Content Sections
+   =============================== */
+
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 20px;
+}
+
+/* ===============================
+   Footer Styles
+   =============================== */
+
+footer {
+    background-color: var(--light-gray);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: var(--primary-blue);
+    font-size: 14px;
+}
