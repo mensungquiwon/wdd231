@@ -79,3 +79,16 @@
 }
 
 }
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr ) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .layout main {
+    grid-column: 1 / 2;
+  }

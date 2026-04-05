@@ -218,3 +218,60 @@ async function loadSpotlights() {
 }
 
 loadSpotlights();
+
+// ===== JOIN FORM TIMESTAMP =====
+const timestampInput = document.querySelector("#timestamp");
+timestampInput.value = new Date().toISOString();    
+
+
+const nonProfitButton = document.querySelector('#nonProfitButton');
+const bronzeButton = document.querySelector('#bronzeButton');
+const silverButton = document.querySelector('#silverButton');
+const goldButton = document.querySelector('#goldButton');
+const dialog = document.querySelector('#dialogbox');
+const closeDialogButton = document.querySelector('#closeDialog');
+
+const dialogBoxText = document.querySelector('#dialogbox div');
+
+nonProfitButton?.addEventListener('click', () => {
+    dialogBoxText.textContent = "Non-profit members receive a free listing on our website and access to our monthly newsletter.";
+    dialog?.showModal();
+});
+
+bronzeButton?.addEventListener('click', () => {
+    dialogBoxText.textContent = "Bronze members receive a discounted rate on our services and access to our quarterly newsletter.";
+    dialog?.showModal();
+});
+
+silverButton?.addEventListener('click', () => {
+    dialogBoxText.textContent = "Silver members receive a free listing on our website and access to our monthly newsletter.";
+    dialog?.showModal();
+});
+
+goldButton?.addEventListener('click', () => {
+    dialogBoxText.textContent = "Gold members receive priority support and access to our exclusive monthly newsletter.";
+    dialog?.showModal();
+});
+
+closeDialogButton?.addEventListener('click', () => {
+    dialog?.close();
+});
+
+
+const params = new URLSearchParams(window.location.search);
+const results = document.getElementById("results");
+
+const timestamp = params.get("date");
+const formattedDate = timestamp
+  ? new Date(timestamp).toLocaleString()
+  : "N/A";
+
+// 
+results.innerHTML = `
+  <p><strong>First Name:</strong> ${params.get("first") || "N/A"}</p>
+  <p><strong>Last Name:</strong> ${params.get("last") || "N/A"}</p>
+  <p><strong>Email:</strong> ${params.get("email") || "N/A"}</p>
+  <p><strong>Mobile Number:</strong> ${params.get("phone") || "N/A"}</p>
+  <p><strong>Business Name:</strong> ${params.get("company") || "N/A"}</p>
+  <p><strong>Submission Date:</strong> ${formattedDate}</p>
+`;
