@@ -12,6 +12,19 @@ if (year) {
         lastMod.textContent = `Last Modified: ${month}/${date}/${fullYear}`;
     }
 }
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const navLinks = document.querySelectorAll("#nav-bar a");
+
+navLinks.forEach(link => {
+  const parentLi = link.parentElement;
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    parentLi.classList.add("current");
+  } else {
+    parentLi.classList.remove("current");
+  }
+});
 
 // ===== HAMBURGER MENU =====
 const hamBtn = document.querySelector("#ham-btn");
@@ -175,36 +188,38 @@ if (forecaster) {
 const container = document.querySelector("#companies");
 
 async function loadSpotlights() {
+    if (!container) return;
+
     try {
         const response = await fetch("data/members.json");
         const members = await response.json();
 
-        // 1. FILTER Gold (1) and Silver (2)
-        const qualified = members.filter(m =>
-            m.membership === 1 || m.membership === 2
+        // Filter Gold (1) & Silver (2)
+        const qualified = members.filter(
+            m => m.membership === 1 || m.membership === 2
         );
 
-        // 2. RANDOMIZE order
+        // Shuffle and select up to 3
         const shuffled = qualified.sort(() => 0.5 - Math.random());
-
-        // 3. Select 2 OR 3 — choose 3 to be safe
         const selected = shuffled.slice(0, 3);
 
-        // 4. Display them
         container.innerHTML = "";
 
         selected.forEach(company => {
             const levelClass = company.membership === 1 ? "gold" : "silver";
+
             container.innerHTML += `
                 <div class="company-card ${levelClass}">
-                
-                <img src="${company.imageHref}" alt="${company.name} logo">
-                <h3>${company.name}</h3>
+                    <img src="${company.imageHref}" alt="${company.name} logo">
+                    <h3>${company.name}</h3>
                     <p><strong>Phone:</strong> ${company.phone}</p>
                     <p><strong>Address:</strong> ${company.addresses[0]}</p>
-                    <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
-
-                    <p class="level ${company.membership === 1 ? "gold" : "silver"}"><strong>Membership Level:</strong> 
+                    <p>
+                        <strong>Website:</strong>
+                        <a href="${company.website}" target="_blank">${company.website}</a>
+                    </p>
+                    <p class="level ${levelClass}">
+                        <strong>Membership Level:</strong>
                         ${company.membership === 1 ? "Gold" : "Silver"}
                     </p>
                 </div>
@@ -219,11 +234,8 @@ async function loadSpotlights() {
 
 loadSpotlights();
 
+
 // ===== JOIN FORM TIMESTAMP =====
-const timestampInput = document.querySelector("#timestamp");
-timestampInput.value = new Date().toISOString();    
-
-
 const nonProfitButton = document.querySelector('#nonProfitButton');
 const bronzeButton = document.querySelector('#bronzeButton');
 const silverButton = document.querySelector('#silverButton');
@@ -257,21 +269,23 @@ closeDialogButton?.addEventListener('click', () => {
     dialog?.close();
 });
 
-
-const params = new URLSearchParams(window.location.search);
 const results = document.getElementById("results");
 
-const timestamp = params.get("date");
-const formattedDate = timestamp
-  ? new Date(timestamp).toLocaleString()
-  : "N/A";
+if (results) {
+  const params = new URLSearchParams(window.location.search);
 
-// 
-results.innerHTML = `
-  <p><strong>First Name:</strong> ${params.get("first") || "N/A"}</p>
-  <p><strong>Last Name:</strong> ${params.get("last") || "N/A"}</p>
-  <p><strong>Email:</strong> ${params.get("email") || "N/A"}</p>
-  <p><strong>Mobile Number:</strong> ${params.get("phone") || "N/A"}</p>
-  <p><strong>Business Name:</strong> ${params.get("company") || "N/A"}</p>
-  <p><strong>Submission Date:</strong> ${formattedDate}</p>
-`;
+  const timestamp = params.get("date");
+  const formattedDate = timestamp
+    ? new Date(timestamp).toLocaleString()
+    : "N/A";
+
+  results.innerHTML = `
+    <p><strong>First Name:</strong> ${params.get("first") || "N/A"}</p>
+    <p><strong>Last Name:</strong> ${params.get("last") || "N/A"}</p>
+    <p><strong>Email:</strong> ${params.get("email") || "N/A"}</p>
+    <p><strong>Mobile Number:</strong> ${params.get("phone") || "N/A"}</p>
+    <p><strong>Business Name:</strong> ${params.get("company") || "N/A"}</p>
+    <p><strong>Submission Date:</strong> ${formattedDate}</p>
+  `;
+}
+

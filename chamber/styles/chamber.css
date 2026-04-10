@@ -1,8 +1,13 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: "Josefin sans", sans-serif;
     box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
 
 header {
     display: grid;
@@ -604,3 +609,61 @@ dialog[open] {
 main {
   font-family: "Josefin sans", sans-serif;
 }
+
+
+#cards div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;   
+    display: grid;
+    grid-template-areas:
+    "name"
+    "photo"
+    "desc"
+    "location";
+}
+
+#cards div h2 {
+    margin: 1rem 16px;
+    grid-area: name;
+}
+
+#cards div img {
+    width: 100%;
+    grid-area: photo;
+
+     
+}
+
+#cards div p {
+    margin: 1rem 10px;
+    grid-area: desc;
+}
+
+#cards div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}
+
+#discover-heading {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    color: #3D405B;
+}
+
+#visit-message {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #3D405B;
+}
+
+
+/* hover effect */
+.hover:hover {
+  box-shadow: 0 0 50px #333;
+}
+
+

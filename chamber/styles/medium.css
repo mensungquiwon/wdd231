@@ -1,0 +1,13 @@
+@media screen and (min-width: 40rem) {
+    
+#cards div {
+    grid-template-areas:
+    "photo name"
+    "photo desc"
+    "photo location";
+}
+
+#cards div img {
+    width: 300px;  
+}
+}

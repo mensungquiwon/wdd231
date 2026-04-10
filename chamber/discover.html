@@ -7,15 +7,16 @@
     <meta name="author" content="Jonathan M. Quiwon">
     <meta property="og:title" content="Directory">
     <meta property="og:description" content="Jonathan's Chamber of commerce directory page. It contains vital information about the board.">
-    <meta property="og:image" content="https://github.com/mensungquiwon/wdd231/blob/main/chamber/images/home.svg">
-    <meta property="og:url" content="https://mensungquiwon.github.io/wdd231/index.html"> 
+    <meta property="og:image" content="https://raw.githubusercontent.com/mensungquiwon/wdd231/main/chamber/chamber-hero.webp">
+    <meta property="og:url" content="https://mensungquiwon.github.io/wdd231/chamber/"> 
 
-    <title>Directory</title>
+    <title>Nimba Chamber of Commerce</title>
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="./styles/chamber.css">
+    <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/chamber-large.css">
-    <script src="./scripts/chamber.js" defer></script>
+    <script type="module" src="./scripts/discover.mjs"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,26 +29,24 @@
         <span>Nimba Chamber of Commerce</span>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button> 
     </header>
-    <nav id="nav-bar" class="navigation">
+   <nav id="nav-bar" class="navigation">
          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li class="current"><a href="directory.html">Business Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li class="current"><a href="directory.html">Business Directory</a></li>
+         <li><a href="join.html">Join</a></li>
+    </ul>
     </nav>
-    <main>
-        <div class="view-buttons">
-            <button id="gridBtn" aria-label="Toggle grid view button">Grid View</button>
-            <button id="listBtn" aria-label="Toggle list view button">List View</button>
-        </div>
-    
 
-        <h1>Directories</h1>
+    <main>
+        <h1 id="discover-heading">
+            Discover Nimba County </h1>
+
         <div id="cards">
         </div>
     </main>
-    <footer>
+  <footer>
+        <span id="visit-message"></span>
         <div class="social">
             <a href="www.linkedin.com/in/jonathan-quiwon" target="_blank"> <img src="./images/linkedin.svg" alt="LinkedIn icon" width="16" height="16"></a>
             <a href="https://github.com/mensungquiwon" target="_blank"> <img src="./images/github.svg" alt="github icon" width="16" height="16"></a>
