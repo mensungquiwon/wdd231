@@ -92,11 +92,11 @@
   }
 
 
-  #cards {
+#discover-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
-#cards div {
+#discover-cards div {
 grid-template-areas:
  "name"
 "photo"
@@ -104,11 +104,11 @@ grid-template-areas:
 "location";
 }
 
-#cards div img {
+#discover-cards div img {
     width: 100%;
 }
 
-#cards div h2 {
+#discover-cards div h2 {
     font-size: 1.5rem;
     margin: 0.5rem 0;
     text-align: center;

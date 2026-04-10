@@ -9,7 +9,7 @@ if (hamBtn && navBar) {
 }
 
 import { businessesData } from "../data/businesses.mjs";
-const cardsContainer = document.querySelector("#cards");
+const cardsContainer = document.querySelector("#discover-cards");
 
 function displayBusinesses(businesses) {
     if (!cardsContainer) return;

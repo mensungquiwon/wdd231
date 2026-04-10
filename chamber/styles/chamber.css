@@ -611,7 +611,7 @@ main {
 }
 
 
-#cards div {
+#discover-cards div {
     margin: 1rem 8px;
     border: 1px solid #999;
     background-color: #eee;
@@ -625,24 +625,24 @@ main {
     "location";
 }
 
-#cards div h2 {
+#discover-cards div h2 {
     margin: 1rem 16px;
     grid-area: name;
 }
 
-#cards div img {
+#discover-cards div img {
     width: 100%;
     grid-area: photo;
 
      
 }
 
-#cards div p {
+#discover-cards div p {
     margin: 1rem 10px;
     grid-area: desc;
 }
 
-#cards div address {
+#discover-cards div address {
     margin: 1rem 10px;
     grid-area: location;
 }
