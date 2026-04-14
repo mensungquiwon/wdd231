@@ -488,6 +488,17 @@ h3 {
     margin: 1.5rem 0 .2rem 0;
     border-bottom: 1px solid #eee;
 }
+textarea {
+    display: block;
+    margin: .1rem 0 1rem 0 ;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #3D405B;
+    width: 250px;
+}
+
 
 input[type=text],
 input[type=tel],
