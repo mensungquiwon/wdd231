@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loan submission confirmation and status tracking">
+  <meta name="author" content="Jonathan M. Quiwon">
+  <link rel="stylesheet" href="./styles/color.css">
+  <script src="./scripts/thankyou.js" defer></script>
+  <title>Thank You | Royal Forex</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>Royal Forex</h1>
+  </header>
+
+  <main>
+    <h2>Thank You for Your Loan Request</h2>
+    <p>Your request has been received. Below is your loan information:</p>
+
+    <section id="loanResults"> 
+      <h3>Submitted Loans</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Amount (USD)</th>
+            <th>Date</th>
+            <th>Repayment Period</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="resultsBody">
+          <!-- JS inserts rows here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Royal Forex</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+@media only screen and (min-width: 64rem) {
+
+    .hamburger {
+        display: none;
+    }
+    .navigation{
+        display: block;
+    }
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border: none;
+    }
+    
+
+/* Special states */
+
+}

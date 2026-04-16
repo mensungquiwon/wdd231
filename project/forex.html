@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Royal Forex is a financial tracking system that provides micro-loan tracking, displays daily foreign exchange rates in Liberia, and monitors the sale of scratch cards.">
+    <meta name="author" content="Jonathan M. Quiwon">
+    <meta 
+
+    <title>Royal Forex</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./styles/color.css">
+    <link rel="stylesheet" href="./styles/royal-large.css">
+    <script src="./scripts/forex.js" defer></script>
+    <script src="./scripts/dashboard.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="site-header">
+  <h1 class="title">Royal Forex</h1>
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="loans.html">Micro‑Loans</a></li>
+      <li><a href="forex.html">Forex Rates</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </ul>
+  </nav>
+</header>
+    
+
+<main>
+    <h2>Daily Foreign Exchange Rates in Liberia</h2>
+    <p>Check the latest exchange rates for the Liberian Dollar (LRD) against major currencies.</p>
+
+    <section id="forexRates">
+        <h3>Current Forex Rates</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Currency</th>
+                    <th scope="col">Exchange Rate (LRD)</th>
+                </tr>
+            </thead>
+            <tbody id="ratesBody">
+                
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Royal Forex</p>
+</footer>
+
+</body>
+</html>

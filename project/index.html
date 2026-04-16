@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Royal Forex is a financial tracking system that provides micro-loan tracking, displays daily foreign exchange rates in Liberia, and monitors the sale of scratch cards.">
+  <meta name="author" content="Jonathan M. Quiwon">
+
+  <title>Royal Forex</title>
+
+  <link rel="stylesheet" href="./styles/color.css">
+  <link rel="stylesheet" href="./styles/royal-large.css">
+  <script src="./scripts/dashboard.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1 class="title">Royal Forex</h1>
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="loans.html">Micro‑Loans</a></li>
+      <li><a href="forex.html">Forex Rates</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+</header>
+
+<main class="dashboard">
+
+
+  <h1>Welcome to Royal Forex</h1>
+  <p>Your comprehensive financial tracking system for micro-loans, forex rates, and scratch card sales in Liberia.</p>
+  <button id="openAuthDialog" class="cta-btn">Sign In / Get Started</button>
+
+  <dialog id="authDialog" class="auth-dialog">
+  <h2>Welcome to Royal Forex</h2>
+  <p class="dialog-subtitle">
+    Sign in to access your dashboard or create an account to apply for a loan.
+  </p>
+
+  <form method="dialog" class="auth-form">
+    <div class="field">
+      <label for="username">Email or Username</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="e.g. jonathan@gmail.com"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required
+      >
+    </div>
+
+    <menu class="dialog-actions">
+      <button id="signInBtn" class="btn-primary">Sign In</button>
+      <button type="button" id="signUpBtn" class="btn-secondary">Sign Up</button>
+      <button type="reset" class="btn-ghost">Cancel</button>
+    </menu>
+  </form>
+</dialog>
+  
+  <section id="dashboardContent" hidden>
+
+  <section class="cards">
+    <div class="stat-card">
+    <span class="icon">📊</span>
+    <h3>Total Loans</h3>
+    <p id="totalLoans"></p>
+  </div>
+
+  <div class="stat-card">
+    <span class="icon">✅</span>
+    <h3>Active Loans</h3>
+    <p id="activeLoans"></p>
+  </div>
+
+  <div class="stat-card warning">
+    <span class="icon">⚠️</span>
+    <h3>Overdue Loans</h3>
+    <p id="overdueLoans"></p>
+  </div>
+
+  <div class="stat-card forex">
+    <span class="icon">💱</span>
+    <h3>USD → LRD</h3>
+    <p id="usdRate"></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Royal Forex | Jonathan M. Quiwon</p>
+</footer>
+</body>
+</html>
